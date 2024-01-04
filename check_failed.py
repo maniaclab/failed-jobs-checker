@@ -1,3 +1,4 @@
+#!/bin/python3.6
 from elasticsearch import Elasticsearch, exceptions as es_exceptions
 from tabulate import tabulate
 from datetime import datetime, timedelta
@@ -40,12 +41,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
                 prog="FailedJobs",
                 description="Query ATLAS Analytics Elasticsearch for failed jobs")
-    parser.add_argument('-c', '--computingsite', default="MWT2")
+    parser.add_argument('-s', '--site', default="MWT2")
     parser.add_argument('-l', '--last', default=24, type=int)
 
     args = parser.parse_args()
     # Get the computing site, default to MWT2
-    computingsite = args.computingsite
+    computingsite = args.site
     # Calculate a start and end date based on the time range asked for
     startdate = hours_ago(args.last)
     enddate = time_now()
@@ -70,7 +71,7 @@ if __name__ == '__main__':
           "field": "pandaid"
         },
         {
-          "field": "piloterrorcode",
+          "field": "piloterrorcode"
         },
         {
           "field": "modificationhost"
