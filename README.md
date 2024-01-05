@@ -6,7 +6,8 @@ You will need to email Lincoln Bryant (lincolnb@uchicago.edu) or Ilija Vukotic
 UChicago.
 
 ## Installation / Setup
-This software requires either `python36-elasticsearch` and `python36-tabulate` packages installed 
+This software requires both `python36-elasticsearch` and `python36-tabulate` packages installed, either through system packages or virtual environment.
+
 ### CentOS 7 
 ```
 yum install python36-elasticsearch6
