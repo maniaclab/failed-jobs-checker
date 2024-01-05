@@ -1,4 +1,4 @@
-#!/bin/python3.6
+#!/bin/env python3.6
 from elasticsearch import Elasticsearch, exceptions as es_exceptions
 from tabulate import tabulate
 from datetime import datetime, timedelta
