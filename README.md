@@ -79,6 +79,7 @@ https://bigpanda.cern.ch/job?pandaid=6069633343  slot1_22@mwt2-c141.campuscluste
 ```
 
 #### Node Search Example
+*NOTE* This mode requires sudo as it needs to read files in the directories of batch system users. 
 ```bash
 (venv) [10:01] uct2-c578.mwt2.org:~/failed-jobs-py $ sudo ./check2.py node
 pandaid                                          modificationhost               piloterrorcode  jobstatus
